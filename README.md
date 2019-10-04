@@ -1,5 +1,4 @@
-### Simple Recursion Examples
-
+## Simple Recursion Examples
 - Overview
 - Recursion Breakdown
 - Examples
@@ -9,20 +8,18 @@
    - Reverse a string
    
 
-## Overview
+### Overview
 
 Recursion is a simple and elegant concept in programming, yet many programmers including experienced ones find it hard to wrap their heads around it. Most text book examples start and end with fibonacci series or the factorial examples. This is my attempt to demystify the concept with better examples and also to lay out the underlying recursive patterns that come out from each of these examples.
 
-## Recursion Breakdown
+### Recursion Breakdown
 Every recursive solution can be broken down into following components
 - One or more base conditions that allows the recursive call to terminate
 - An expression or logic that will allow us to arrive at the required solution
 - One or more Recursive calls to self, typically a complex divide and conquer problem will have multiple recursive calls, whereas the ones we have here such as string reversal, repeated addition, etc., have a single recursive call.
 - One or more parameters passed to the recursive call. The number of parameters depends on the logic you employ to arrive at the solution and also the various base conditions that you may employ. 
 
-## Multiplication using Repeated Addition
-
-[Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/Multiplication.cs)
+### [Multiplication using Repeated Addition](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/Multiplication.cs)
 
 Inputs: 5, 4
 
@@ -48,9 +45,7 @@ Base Condition | Expression | Number of Recursive Calls | Number of parameters
 -------------- | ---------- | ------------------------- | --------------------
 y == 1         | return x + RepeatedAddition(x, y - 1); | 1 | 2
 
-## X to the power of Y
-
-[Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/PowRecursion.cs)
+### [X to the power of Y](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/PowRecursion.cs)
 
 Inputs: 5, 4
 
@@ -78,9 +73,7 @@ Base Condition | Expression | Number of Recursive Calls | Number of parameters
 y == 1         | return x * PowRecursion(x, y - 1); | 1 | 2
 
 
-## Add all numbers in sequence till X
-
-[Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/AddSequence.cs)
+### [Add all numbers in sequence till X](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/AddSequence.cs)
 
 Input: 5
 
@@ -110,9 +103,7 @@ Base Condition | Expression | Number of Recursive Calls | Number of parameters
 -------------- | ---------- | ------------------------- | --------------------
 x == 1         | return x + AddSequenceTill(x - 1); | 1 | 1
 
-## Reverse a string
-
-[Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/StringReverse.cs)
+### [Reverse a string](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/StringReverse.cs)
 
 Input: "Hello"
 
