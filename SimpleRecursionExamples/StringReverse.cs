@@ -9,12 +9,12 @@ namespace SimpleRecursionExamples
             string input = Console.ReadLine();
             while(input != "q")
             {
-                Console.WriteLine(sr.Reverse(input, input.Length));
+                Console.WriteLine(sr.Reverse(input));
                 input = Console.ReadLine();
             }
         }
 
-        public string Reverse(string s, int length)
+        public string Reverse(string s)
         {
             // Base condition 1
             if(s == string.Empty)
@@ -26,8 +26,8 @@ namespace SimpleRecursionExamples
             {
                 return s;
             }
-            // Recursive call with two parameters and accumulation
-            return s[length - 1] + Reverse(s.Substring(0, length - 1), length - 1);
+            // Recursive call with one parameters and accumulation
+            return s[s.Length - 1] + Reverse(s.Substring(0, s.Length - 1));
         }
     }
 }
