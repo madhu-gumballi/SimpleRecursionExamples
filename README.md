@@ -1,7 +1,8 @@
-# SimpleRecursionExamples
-Simple examples of Recursion
+Recursion is a simple and elegant concept in programming, yet many programmers including experienced ones find it hard to wrap their heads around it. Most text book examples start and end with fibonacci series or the factorial examples. This is my attempt to demystify the concept with better examples and also to lay out the underlying recursive patterns that come out from each of these examples.
 
-## 1 Multiplication using Repeated Addition
+## 1. Multiplication using Repeated Addition
+
+[Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/Multiplication.cs)
 
 Inputs: 5, 4
 
@@ -24,7 +25,9 @@ Now call stack gets unwinded by executing the calls
 `= 20`
 
 
-## 2 X to the power of Y
+## 2. X to the power of Y
+
+[Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/PowRecursion.cs)
 
 Inputs: 5, 4
 
@@ -47,7 +50,9 @@ Now call stack gets unwinded by executing the calls
 
 `= 625`
 
-## 3 Add all numbers in sequence till X
+## 3. Add all numbers in sequence till X
+
+[Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/AddSequence.cs)
 
 Input: 5
 
