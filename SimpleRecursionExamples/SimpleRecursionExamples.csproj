@@ -37,6 +37,7 @@
     <Compile Include="Multiplication.cs" />
     <Compile Include="PowRecursion.cs" />
     <Compile Include="AddSequence.cs" />
+    <Compile Include="StringReverse.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
