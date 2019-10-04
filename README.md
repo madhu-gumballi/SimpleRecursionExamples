@@ -1,13 +1,11 @@
+### Simple Recursion Examples
+
 - Overview
 - Recursion Breakdown
 - Examples
-
    - Multiplication using Repeated Addition
-   
    - X to the power of Y
-   
    - Add all numbers in sequence till X
-   
    - Reverse a string
    
 
@@ -46,6 +44,9 @@ Now call stack gets unwinded by executing the calls
 
 `= 20`
 
+Base Condition | Expression | Number of Recursive Calls | Number of parameters
+-------------- | ---------- | ------------------------- | --------------------
+y == 1         | return x + RepeatedAddition(x, y - 1); | 1 | 2
 
 ## X to the power of Y
 
@@ -71,6 +72,11 @@ Now call stack gets unwinded by executing the calls
 `= 5 * 5 * 5 * 5`
 
 `= 625`
+
+Base Condition | Expression | Number of Recursive Calls | Number of parameters
+-------------- | ---------- | ------------------------- | --------------------
+y == 1         | return x * PowRecursion(x, y - 1); | 1 | 2
+
 
 ## Add all numbers in sequence till X
 
@@ -100,6 +106,10 @@ Now call stack gets unwinded by executing the calls
 
 `= 15`
 
+Base Condition | Expression | Number of Recursive Calls | Number of parameters
+-------------- | ---------- | ------------------------- | --------------------
+x == 1         | return x + AddSequenceTill(x - 1); | 1 | 1
+
 ## Reverse a string
 
 [Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/StringReverse.cs)
@@ -107,15 +117,27 @@ Now call stack gets unwinded by executing the calls
 Input: "Hello"
 
 `= 'o' + Reverse("Hell")`
+
 `= 'o' + Reverse("Hell") + Reverse("Hel")`
+
 `= 'o' + Reverse("Hell") + Reverse("Hel") + Reverse("He")`
+
 `= 'o' + Reverse("Hell") + Reverse("Hel") + Reverse("He") + Reverse("H")`
+
 
 Now call stack gets unwinded by executing the calls
 
 `= 'o' + 'l' + Reverse("Hel") + Reverse("He") + Reverse("H")`
+
 `= 'o' + 'l' + 'l' + Reverse("He") + Reverse("H")`
+
 `= 'o' + 'l' + 'l' + 'e' + Reverse("H")`
+
 `= 'o' + 'l' + 'l' + 'e' + 'H'`
+
 `= 'olleH'`
+
+Base Condition | Expression | Number of Recursive Calls | Number of parameters
+-------------- | ---------- | ------------------------- | --------------------
+s == string.Empty & s.Length == 1 | return s[s.Length - 1] + Reverse(s.Substring(0, s.Length - 1)); | 1 | 1
 
