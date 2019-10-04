@@ -1,6 +1,28 @@
+- Overview
+- Recursion Breakdown
+- Examples
+
+   - Multiplication using Repeated Addition
+   
+   - X to the power of Y
+   
+   - Add all numbers in sequence till X
+   
+   - Reverse a string
+   
+
+## Overview
+
 Recursion is a simple and elegant concept in programming, yet many programmers including experienced ones find it hard to wrap their heads around it. Most text book examples start and end with fibonacci series or the factorial examples. This is my attempt to demystify the concept with better examples and also to lay out the underlying recursive patterns that come out from each of these examples.
 
-## 1. Multiplication using Repeated Addition
+## Recursion Breakdown
+Every recursive solution can be broken down into following components
+- One or more base conditions that allows the recursive call to terminate
+- An expression or logic that will allow us to arrive at the required solution
+- One or more Recursive calls to self, typically a complex divide and conquer problem will have multiple recursive calls, whereas the ones we have here such as string reversal, repeated addition, etc., have a single recursive call.
+- One or more parameters passed to the recursive call. The number of parameters depends on the logic you employ to arrive at the solution and also the various base conditions that you may employ. 
+
+## Multiplication using Repeated Addition
 
 [Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/Multiplication.cs)
 
@@ -25,7 +47,7 @@ Now call stack gets unwinded by executing the calls
 `= 20`
 
 
-## 2. X to the power of Y
+## X to the power of Y
 
 [Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/PowRecursion.cs)
 
@@ -50,7 +72,7 @@ Now call stack gets unwinded by executing the calls
 
 `= 625`
 
-## 3. Add all numbers in sequence till X
+## Add all numbers in sequence till X
 
 [Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/AddSequence.cs)
 
@@ -78,5 +100,22 @@ Now call stack gets unwinded by executing the calls
 
 `= 15`
 
+## Reverse a string
 
+[Source Code](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/StringReverse.cs)
+
+Input: "Hello"
+
+`= 'o' + Reverse("Hell")`
+`= 'o' + Reverse("Hell") + Reverse("Hel")`
+`= 'o' + Reverse("Hell") + Reverse("Hel") + Reverse("He")`
+`= 'o' + Reverse("Hell") + Reverse("Hel") + Reverse("He") + Reverse("H")`
+
+Now call stack gets unwinded by executing the calls
+
+`= 'o' + 'l' + Reverse("Hel") + Reverse("He") + Reverse("H")`
+`= 'o' + 'l' + 'l' + Reverse("He") + Reverse("H")`
+`= 'o' + 'l' + 'l' + 'e' + Reverse("H")`
+`= 'o' + 'l' + 'l' + 'e' + 'H'`
+`= 'olleH'`
 
