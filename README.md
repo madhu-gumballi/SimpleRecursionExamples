@@ -41,7 +41,7 @@ Now call stack gets unwinded by executing the calls
 
 `= 20`
 
-Base Condition | Expression | Number of Recursive Calls | Number of parameters
+Base Condition | Expression | # of Recursive Calls | # of parameters
 -------------- | ---------- | ------------------------- | --------------------
 y == 1         | return x + RepeatedAddition(x, y - 1); | 1 | 2
 
@@ -68,7 +68,7 @@ Now call stack gets unwinded by executing the calls
 
 `= 625`
 
-Base Condition | Expression | Number of Recursive Calls | Number of parameters
+Base Condition | Expression | # of Recursive Calls | # of parameters
 -------------- | ---------- | ------------------------- | --------------------
 y == 1         | return x * PowRecursion(x, y - 1); | 1 | 2
 
@@ -99,7 +99,7 @@ Now call stack gets unwinded by executing the calls
 
 `= 15`
 
-Base Condition | Expression | Number of Recursive Calls | Number of parameters
+Base Condition | Expression | # of Recursive Calls | # of parameters
 -------------- | ---------- | ------------------------- | --------------------
 x == 1         | return x + AddSequenceTill(x - 1); | 1 | 1
 
@@ -128,7 +128,7 @@ Now call stack gets unwinded by executing the calls
 
 `= 'olleH'`
 
-Base Condition | Expression | Number of Recursive Calls | Number of parameters
+Base Conditions | Expression | # of Recursive Calls | # of parameters
 -------------- | ---------- | ------------------------- | --------------------
 s == string.Empty & s.Length == 1 | return s[s.Length - 1] + Reverse(s.Substring(0, s.Length - 1)); | 1 | 1
 
