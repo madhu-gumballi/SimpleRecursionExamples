@@ -10,14 +10,14 @@
 
 ### Overview
 
-Recursion is a simple and elegant concept in programming, yet many programmers including experienced ones find it hard to wrap their heads around it. Most text book examples start and end with fibonacci series or the factorial examples. This is my attempt to demystify the concept with better examples and also to lay out the underlying recursive patterns that come out from each of these examples.
+Recursion is a simple and elegant concept in programming, yet many programmers including experienced ones find it hard to wrap their heads around it. Most text book examples start and end with fibonacci series or the factorial examples. This is my attempt to simplify the concept with better examples and also to bring out the various patterns that are employed in recursion.
 
 ### Recursion Breakdown
 Every recursive solution can be broken down into following components
-- One or more base conditions that allows the recursive call to terminate
-- An expression or logic that will allow us to arrive at the required solution
-- One or more Recursive calls to self, typically a complex divide and conquer problem will have multiple recursive calls, whereas the ones we have here such as string reversal, repeated addition, etc., have a single recursive call.
-- One or more parameters passed to the recursive call. The number of parameters depends on the logic you employ to arrive at the solution and also the various base conditions that you may employ. 
+- [X] One or more **base conditions** that allows the recursive call to terminate
+- [X] An **expression** or logic that will allow us to arrive at the required solution
+- [X] One or more Recursive **calls to self**, typically a complex divide and conquer problem will have multiple recursive calls, whereas the ones we have here such as string reversal, repeated addition, etc., have a single recursive call.
+- [X] One or more **parameters** passed to the recursive call. The number of parameters depends on the logic you employ to arrive at the solution and also the various base conditions that you may employ. 
 
 ### [Multiplication using Repeated Addition](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/Multiplication.cs)
 
