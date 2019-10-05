@@ -15,8 +15,9 @@ Recursion is a simple and elegant concept in programming, yet many programmers i
 ### Recursion Breakdown
 Every recursive solution can be broken down into following components
 - [X] One or more **base conditions** that allows the recursive call to terminate
-- [X] An **expression** or logic that will allow us to arrive at the required solution
-- [X] One or more Recursive **calls to self**, typically a complex divide and conquer problem will have multiple recursive calls, whereas the ones we have here such as string reversal, repeated addition, etc., have a single recursive call.
+- [X] An **expression** or logic that will help us arrive at the base condition
+- [X] One or more Recursive **calls to self**, typically a complex divide and conquer problem can have multiple recursive calls, whereas the ones we have here such as string reversal, repeated addition, etc., have a single recursive call.
+- [X] Recursive calls could be embedded within the function or it could be a [tail call](https://en.wikipedia.org/wiki/Tail_call)
 - [X] One or more **parameters** passed to the recursive call. The number of parameters depends on the logic you employ to arrive at the solution and also the various base conditions that you may employ. 
 
 ### [Multiplication using Repeated Addition](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/Multiplication.cs)
