@@ -4,7 +4,8 @@
 - Examples
    - Multiplication using Repeated Addition
    - X to the power of Y
-   - Add all numbers in sequence till X
+   - Add all numbers in sequence till X (single recursion)
+   - Add all numbers in sequence (multiple recursion)
    - Reverse a string
    
 
@@ -74,7 +75,7 @@ Base Condition | Expression | # of Recursive Calls | # of parameters
 y == 1         | return x * PowRecursion(x, y - 1); | 1 | 2
 
 
-### [Add all numbers in sequence till X](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/AddSequence.cs)
+### [Add all numbers in sequence till X (single recursion)](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/AddSequence.cs)
 
 Input: 5
 
@@ -104,6 +105,38 @@ Base Condition | Expression | # of Recursive Calls | # of parameters
 -------------- | ---------- | ------------------------- | --------------------
 x == 1         | return x + AddSequenceTill(x - 1); | 1 | 1
 
+### [Add all numbers in sequence (multiple recursion)](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/AddSequence2.cs)
+
+Input: { 5, 4, 3, 2, 1 }
+
+Start building call stack as show below
+
+`= AddSequenceTill({5, 4}) + AddSequenceTill({3, 2, 1})`
+
+`= AddSequenceTill({5}) + AddSequenceTill({4}) + AddSequenceTill({3, 2} + AddSequenceTill({1}))`
+
+`= AddSequenceTill({5}) + AddSequenceTill({4}) + AddSequenceTill({3}) + AddSequenceTill({2}) + AddSequenceTill({1})`
+
+Now call stack gets unwinded by executing the calls
+
+`= AddSequenceTill({5}) + AddSequenceTill({4}) + AddSequenceTill({3}) + AddSequenceTill({2}) + AddSequenceTill({1})`
+
+`= 5 + AddSequenceTill({4}) + AddSequenceTill({3}) + AddSequenceTill({2}) + AddSequenceTill({1})`
+
+`= 5 + 4 + AddSequenceTill({3}) + AddSequenceTill({2}) + AddSequenceTill({1})`
+
+`= 5 + 4 + 3 + AddSequenceTill({2}) + AddSequenceTill({1})`
+
+`= 5 + 4 + 3 + 2 + AddSequenceTill({1})`
+
+`= 5 + 4 + 3 + 2 + 1`
+
+`= 15`
+
+Base Condition | Expression | # of Recursive Calls | # of parameters
+-------------- | ---------- | ------------------------- | --------------------
+a.Length == 0; a.Length == 1 | return AddSequenceTill(a1) + AddSequenceTill(a2); | **2** | 1
+
 ### [Reverse a string](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/StringReverse.cs)
 
 Input: "Hello"
@@ -131,5 +164,5 @@ Now call stack gets unwinded by executing the calls
 
 Base Conditions | Expression | # of Recursive Calls | # of parameters
 -------------- | ---------- | ------------------------- | --------------------
-s == string.Empty & s.Length == 1 | return s[s.Length - 1] + Reverse(s.Substring(0, s.Length - 1)); | 1 | 1
+s == string.Empty; s.Length == 1 | return s[s.Length - 1] + Reverse(s.Substring(0, s.Length - 1)); | 1 | 1
 
