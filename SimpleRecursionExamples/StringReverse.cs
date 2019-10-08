@@ -3,7 +3,7 @@ namespace SimpleRecursionExamples
 {
     public class StringReverse
     {
-        public static void Main(string[] args)
+        /*public static void Main(string[] args)
         {
             StringReverse sr = new StringReverse();
             string input = Console.ReadLine();
@@ -12,7 +12,7 @@ namespace SimpleRecursionExamples
                 Console.WriteLine(sr.Reverse(input));
                 input = Console.ReadLine();
             }
-        }
+        } */
 
         public string Reverse(string s)
         {
