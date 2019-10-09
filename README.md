@@ -1,6 +1,7 @@
 ## Simple Recursion Examples
 - Overview
 - Recursion Breakdown
+- Disadvantages
 - Examples
    - Multiplication using Repeated Addition
    - X to the power of Y
@@ -15,11 +16,16 @@
 
 ### Recursion Breakdown
 Every recursive solution can be broken down into following components
-- [X] One or more **base conditions** that allows the recursive call to terminate
-- [X] An **expression** or logic that will help us arrive at the base condition
+- [X] Understand the size of the problem. This involves identifying the input, output and relationship between them. The size of the problem can be seen as the **total number of operations** that the algorithms need in order to solve our problem. This number can be directly related to the input parameter or one of its attribute (such as length of a list).
+- [X] One or more **base conditions (cases)** that allows the recursive call to terminate. It must also be noted that base cases are **specific (smaller) instances of the problem** and it will never contain a recursive call. If multiple base cases yield the same output, they can be combined using an OR or a AND operation. If base cases yield different outputs then one can put them in a cascading if..else structure.
+- [X] An **expression** or logic that involves decreasing the size of the problem and helps us arrive closer to the base condition/s
 - [X] One or more Recursive **calls to self**, typically a complex divide and conquer problem can have multiple recursive calls, whereas the ones we have here such as string reversal, repeated addition, etc., have a single recursive call.
 - [X] Recursive calls could be embedded within the function or it could be a [tail call](https://en.wikipedia.org/wiki/Tail_call)
 - [X] One or more **parameters** passed to the recursive call. The number of parameters depends on the logic you employ to arrive at the solution and also the various base conditions that you may employ. 
+
+### Disadvantages
+- Any function call, whether it is recursive or not, allocates memory on the program stack to store certain information on it, such as input parameters, return type, etc., This means a certain amount of overhead which can make recursive programs **slower** and on occasions run the risk of running into a **stack overflow error**.
+- Recursive programs are harder to analyze and **difficult to debug**, this becomes even more apparent when you do have multiple recursive calls within your function.
 
 ### [Multiplication using Repeated Addition](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/Multiplication.cs)
 
