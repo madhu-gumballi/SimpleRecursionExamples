@@ -12,7 +12,7 @@
 
 ### Overview
 
-[Recursion](https://everything2.com/index.pl?node_id=477013) is a simple and elegant concept in programming, yet many programmers including experienced ones find it hard to wrap their heads around it. Most text book examples start and end with fibonacci series or the factorial examples. This is my attempt to simplify the concept with better examples and also to bring out the various patterns that are employed in recursion.
+[Recursion](https://everything2.com/index.pl?node_id=477013) is a simple and elegant concept in programming, yet many programmers including experienced ones find it hard to take that recursive [leap of faith](https://www.reddit.com/r/compsci/comments/44syr6/understanding_the_recursive_leap_of_faith/). Most text book examples start and end with fibonacci series or the factorial examples. This is my attempt to simplify the concept with better examples and also to bring out the various patterns that are employed in recursion.
 
 ### Recursion Breakdown
 Every recursive solution can be broken down into following components
