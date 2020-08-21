@@ -14,6 +14,11 @@
 
 [Recursion](https://everything2.com/index.pl?node_id=477013) is a simple and elegant concept in programming, yet many programmers including experienced ones find it hard to take that recursive [leap of faith](https://www.reddit.com/r/compsci/comments/44syr6/understanding_the_recursive_leap_of_faith/). Most text book examples start and end with fibonacci series or the factorial examples. This is my attempt to simplify the concept with better examples and also to bring out the various patterns that are employed in recursion.
 
+Before we jump into the simple examples, curious minds will spot recursion in everything around them. These could be the universe (galaxies), flowers or even plants (a spiral aloe vera) as shown below.
+
+![Recursion in Nature](recursion_in_nature_succalent.png)
+[Here](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/spiral_aloevera.py) is the recursive code to generate the spiral aloe vera.
+
 ### Recursion Breakdown
 Every recursive solution can be broken down into following components
 - [X] Understand the size of the problem. This involves identifying the input, output and relationship between them. The size of the problem can be seen as the **total number of operations** that the algorithms need in order to solve our problem. This number can be directly related to the input parameter or one of its attribute (such as length of a list).
