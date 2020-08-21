@@ -14,7 +14,7 @@
 
 [Recursion](https://everything2.com/index.pl?node_id=477013) is a simple and elegant concept in programming, yet many programmers including experienced ones find it hard to take that recursive [leap of faith](https://www.reddit.com/r/compsci/comments/44syr6/understanding_the_recursive_leap_of_faith/). Most text book examples start and end with fibonacci series or the factorial examples. This is my attempt to simplify the concept with better examples and also to bring out the various patterns that are employed in recursion.
 
-Before we jump into the simple examples, curious minds will spot recursion in everything around them. These could be the universe (galaxies), flowers or even plants (a spiral aloe vera) as shown below.
+Before we jump into the simple examples, curious minds will spot recursion in everything around them. These could be the universe (galaxies), flowers or even plants (a spiral aloe vera) as shown below. These [fractal patterns](https://en.wikipedia.org/wiki/Fractal) helps us visualize recursion. This is particularly useful in observing how minor changes to the recursion parameters and expressions can completely change the visual pattern and the outcome.
 
 ![Recursion in Nature](recursion_in_nature_succalent.png)
 [Here](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/spiral_aloevera.py) is the recursive code to generate the spiral aloe vera.
