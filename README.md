@@ -36,6 +36,10 @@ Every recursive solution can be broken down into following components
 
 Inputs: 5, 4
 
+Base Condition | Expression | # of Recursive Calls | # of parameters
+-------------- | ---------- | ------------------------- | --------------------
+y == 1         | return x + RepeatedAddition(x, y - 1); | 1 | 2
+
 Start building call stack as show below
 
 `= 5 + RepeatedAddition(5, 4 - 1)`
@@ -54,13 +58,13 @@ Now call stack gets unwinded by executing the calls
 
 `= 20`
 
-Base Condition | Expression | # of Recursive Calls | # of parameters
--------------- | ---------- | ------------------------- | --------------------
-y == 1         | return x + RepeatedAddition(x, y - 1); | 1 | 2
-
 ### [X to the power of Y](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/PowRecursion.cs)
 
 Inputs: 5, 4
+
+Base Condition | Expression | # of Recursive Calls | # of parameters
+-------------- | ---------- | ------------------------- | --------------------
+y == 1         | return x * PowRecursion(x, y - 1); | 1 | 2
 
 Start building call stack as show below
 
@@ -81,14 +85,13 @@ Now call stack gets unwinded by executing the calls
 
 `= 625`
 
-Base Condition | Expression | # of Recursive Calls | # of parameters
--------------- | ---------- | ------------------------- | --------------------
-y == 1         | return x * PowRecursion(x, y - 1); | 1 | 2
-
-
 ### [Add all numbers in sequence till X (single recursion)](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/AddSequence.cs)
 
 Input: 5
+
+Base Condition | Expression | # of Recursive Calls | # of parameters
+-------------- | ---------- | ------------------------- | --------------------
+x == 1         | return x + AddSequenceTill(x - 1); | 1 | 1
 
 Start building call stack as show below
 
@@ -112,13 +115,13 @@ Now call stack gets unwinded by executing the calls
 
 `= 15`
 
-Base Condition | Expression | # of Recursive Calls | # of parameters
--------------- | ---------- | ------------------------- | --------------------
-x == 1         | return x + AddSequenceTill(x - 1); | 1 | 1
-
 ### [Add all numbers in sequence (multiple recursion)](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/AddSequence2.cs)
 
 Input: { 5, 4, 3, 2, 1 }
+
+Base Condition | Expression | # of Recursive Calls | # of parameters
+-------------- | ---------- | ------------------------- | --------------------
+a.Length == 0; a.Length == 1 | return AddSequenceTill(a1) + AddSequenceTill(a2); | **2** | 1
 
 Start building call stack as show below
 
@@ -144,13 +147,13 @@ Now call stack gets unwinded by executing the calls
 
 `= 15`
 
-Base Condition | Expression | # of Recursive Calls | # of parameters
--------------- | ---------- | ------------------------- | --------------------
-a.Length == 0; a.Length == 1 | return AddSequenceTill(a1) + AddSequenceTill(a2); | **2** | 1
-
 ### [Reverse a string](https://github.com/1kautilya1/SimpleRecursionExamples/blob/master/SimpleRecursionExamples/StringReverse.cs)
 
 Input: "Hello"
+
+Base Conditions | Expression | # of Recursive Calls | # of parameters
+-------------- | ---------- | ------------------------- | --------------------
+s == string.Empty; s.Length == 1 | return s[s.Length - 1] + Reverse(s.Substring(0, s.Length - 1)); | 1 | 1
 
 `= 'o' + Reverse("Hell")`
 
@@ -172,8 +175,4 @@ Now call stack gets unwinded by executing the calls
 `= 'o' + 'l' + 'l' + 'e' + 'H'`
 
 `= 'olleH'`
-
-Base Conditions | Expression | # of Recursive Calls | # of parameters
--------------- | ---------- | ------------------------- | --------------------
-s == string.Empty; s.Length == 1 | return s[s.Length - 1] + Reverse(s.Substring(0, s.Length - 1)); | 1 | 1
 
